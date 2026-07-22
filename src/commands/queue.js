@@ -2,11 +2,11 @@ const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, Butt
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('queue')
+        .setName('fila')
         .setDescription('Painel das ranqueadas TFR')
         .addSubcommand(sub =>
             sub.setName('setup')
-                .setDescription('Envia o painel de queue no canal atual')
+                .setDescription('Envia o painel de fila no canal atual')
                 .addStringOption(opt => 
                     opt.setName('modo')
                        .setDescription('Escolha a modalidade')
@@ -25,7 +25,7 @@ module.exports = {
 
         const embed = new EmbedBuilder()
             .setTitle(`TFR Ranked • Fila ${mode}`)
-            .setDescription(`**Status:** Fila Aberta\n**Jogadores:** 0 / ${maxPlayers}\n\nClique no botão abaixo para entrar na queue!`)
+            .setDescription(`**Status:** Fila Aberta\n**Jogadores:** 0 / ${maxPlayers}\n\nClique no botão abaixo para entrar na fila!`)
             .setColor('#2f3136')
             .setFooter({ text: 'Sistema TFR Ranked' });
 
